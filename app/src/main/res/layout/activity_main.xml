@@ -1,19 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="15dp">
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Altura"
+        android:textSize="24sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/alturaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Altura en cm"
+        android:inputType="number"
+        />
+
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Peso"
+        android:textSize="24sp"/>
+
+
+    <EditText
+        android:id="@+id/pesoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Peso en Kg"
+        android:inputType="number"
+        android:height="50dp"/>
+
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:text="Calcular IMC "
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/resultadoIMC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/black"
+        tools:text=" total= 30"
+        android:layout_gravity="center"
+        android:textSize="70dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="#04D304"
+        />
+
+</LinearLayout>

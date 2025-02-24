@@ -1,4 +1,4 @@
 # ImcCalculator
 aplicación de imc de calculadora
 
-creado hoy para primera vez de app en andorid 
+creado hoy 20/Feb para primera vez de app en andorid 
