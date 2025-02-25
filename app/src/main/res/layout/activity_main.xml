@@ -1,47 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
+
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:padding="15dp">
+    android:padding="15dp"
+    android:background="#8CDAEB">
 
 
-    <TextView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Altura"
-        android:textSize="24sp" />
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp"
+        android:layout_margin="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Altura (cm):"
+                    android:textSize="24sp"/>
+                <TextView
+                    android:id="@+id/heightTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="170 cm"
+                    android:textSize="60dp"
+                    android:textColor="@color/primario"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
 
 
-    <EditText
-        android:id="@+id/alturaText"
+
+                <!-- componente slider -->
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+
+                    android:value="170"
+                    android:valueFrom="100.0"
+                    android:valueTo="240.0"
+                    app:labelBehavior="gone"
+                    app:trackColor="@color/primario" />
+            </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Altura en cm"
-        android:inputType="number"
-        />
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp"
+        android:layout_margin="10dp" >
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+
+     <TextView
+
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Peso(Kg):"
+         android:textSize="24sp"
+         android:layout_weight="1"/>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+         <Button
+             android:id="@+id/weightMinusButton"
+             style="?attr/materialIconButtonFilledStyle"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:icon="@drawable/ic_minus"
+             android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/weightTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="70"
+            android:textSize="60dp"
+            android:textColor="@color/primario"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+
+        </TextView>
+
+         <Button
+             android:id="@+id/weightPlusButton"
+             style="?attr/materialIconButtonFilledStyle"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:icon="@drawable/ic_plus"
+             android:layout_gravity="center"/>
+
+     </LinearLayout>
 
 
 
-    <TextView
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Peso"
-        android:textSize="24sp"/>
+ </LinearLayout>
 
 
-    <EditText
-        android:id="@+id/pesoText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Peso en Kg"
-        android:inputType="number"
-        android:height="50dp"/>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
 
 
     <Button
@@ -66,5 +154,7 @@
         android:textStyle="bold"
         android:textColor="#04D304"
         />
+
+
 
 </LinearLayout>
